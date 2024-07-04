@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ad</title>
+    <link rel="stylesheet" href="./style.css" />
+    <link rel="icon" type="image/x-icon" href="./favicon/favicon.ico" />
+  </head>
+  <body>
+    <div class="flex">
+      <button title="Display Ad" type="button" id="open-popup">Open Popup</button>
+    </div>
+    <div class="fullscreen-container">
+      <div id="popup-content">
+        <h1>Want to save money?</h1>
+        <div class="container">
+          <div class="bar1"></div>
+          <div class="bar2"></div>
+          <div class="bar3"></div>
+        </div>
+        <p>Get <b>15%</b> off on products from Amazon, Target, and more with this code: <b>B42J4K8F</b>.</p>
+        <p>This code expires in <b>4 hours!</b></p>
+        <p>For more information, <a href="./index.html">click here.</a></p>
+        <button>Enter Code Here</button>
+      </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+    <script>
+      $(function () {
+        $("#open-popup").click(function () {
+          $(".fullscreen-container").fadeIn(200);
+        });
+
+        $(".container").click(function () {
+          $(".fullscreen-container").fadeOut(200);
+        });
+      });
+    </script>
+  </body>
+</html>
